@@ -5,7 +5,7 @@ const browserSync = require('browser-sync').create();
 const del = require('del');
 const wiredep = require('wiredep').stream;
 const runSequence = require('run-sequence');
-const deploy      = require('gulp-deploy-git');
+const deploy      = require('gulp-gh-pages');
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
@@ -182,9 +182,6 @@ gulp.task('default', () => {
  * Push build to gh-pages
  */
 gulp.task('deploy', ['build'], function () {
-  return gulp.src("./dist/**/*", { read: false })
-  .pipe(deploy({
-    repository: 'https://github.com/brainlamp/brainlamp.io.git',
-    branches:   ['master']
-  }));
+  return gulp.src("./dist/**/*")
+    .pipe(deploy())
 });
