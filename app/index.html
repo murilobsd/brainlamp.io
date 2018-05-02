@@ -163,7 +163,10 @@
           <div class="col-lg-5">
           <div class="card box-shadow-v2 bg-white u-of-hidden text-center">
              <h2 class="bg-brainlamp m-0 py-3 text-white">Get Api Key Now</h2>
-             <form action="" method="POST" class="p-4 p-md-5" novalidate>
+             <div id="form-response" class="row">
+                
+             </div>
+             <form id="form-apikey" class="p-4 p-md-5" novalidate>
                 <div class="form-group row text-left">
                     <label for="inputHorizontalSuccess" class="pl-4 col-sm-6 col-form-label">Account Type</label>
                     <div class="col-sm-6">
@@ -200,7 +203,7 @@
             <div class="input-group  u-rounded-10 border u-of-hidden u-mb-20 account_free">
               <textarea class="form-control border-0 p-3" rows="3" name="use" id="use" placeholder="A short description of the application or website that will use this API."></textarea>
             </div>
-               <button class="btn btn-brainlamp btn-rounded">
+               <button type="submit" class="btn btn-brainlamp btn-rounded">
                  Get my key
                </button>
              </form>
