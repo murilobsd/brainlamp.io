@@ -19,16 +19,16 @@ function showInputs(selector) {
 
 function changeAccountType(selector) {
 
-    $("input[name='account_type']").on("click", function() {
-        if ($("input#account_patreon").is(":checked")) {
-            if(!$("input#email").val()) { 
-                $("input#email").attr("placeholder", "Email registered in patreon");
+    $('input[name=\'account_type\']').on('click', function() {
+        if ($('input#account_patreon').is(':checked')) {
+            if(!$('input#email').val()) { 
+                $('input#email').attr('placeholder', 'Email registered in patreon');
             }
             hiddenInputs(selector);
         } else {
             showInputs(selector);
-            if(!$("input#email").val()) { 
-                $("input#email").attr("placeholder", "Your email");
+            if(!$('input#email').val()) { 
+                $('input#email').attr('placeholder', 'Your email');
             }
         }
     });
@@ -36,7 +36,7 @@ function changeAccountType(selector) {
 
 $(document).ready(function() {
     // hidden default;
-    hiddenInputs(".account_free");
-    changeAccountType(".account_free");
+    hiddenInputs('.account_free');
+    changeAccountType('.account_free');
 });
 
