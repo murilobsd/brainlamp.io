@@ -70,7 +70,7 @@
           </ul> <!-- END list-inline-->
           </div> <!-- END col-md-6 -->
           <div class="col-md-6 mb-3 mb-md-0">
-            <ul class="list-inline social social-rounded social-default social-sm mb-0 text-center text-md-right">
+            <ul class="list-inline social social-rounded social-brainlamp social-sm mb-0 text-center text-md-right">
               <li class="list-inline-item">
                 <a href="https://github.com/brainlamp"><i class="fab fa-github"></i></a>
               </li>
@@ -93,7 +93,7 @@
       <div class="container">
         <nav class="navbar navbar-expand-lg">
          
-          <a class="navbar-brand" href="index.html">
+          <a class="navbar-brand" href="/">
               <img src="images/logo.png" alt="">
           </a>
           
@@ -145,43 +145,58 @@
         <div class="row align-items-center">
           <div class="col-lg-7 mb-5 mb-lg-0">
               <h1 class="display-4 u-fw-600">
-                  <span class="text-primary">BrainLamp</span> BigData of Triathlon
+                  <span class="text-brainlamp">BrainLamp</span> BigData of Triathlon
                 </h1>
                 <p class="u-fs-22 u-lh-1_8 my-4">
               The BrainLamp API is a RESTful web service to obtain athlete information, all content and images on the site are contributed and maintained by our users. 
                 </p>
-                <a href="" class="btn btn btn-rounded btn-primary  u-w-170 u-mt-15">
+                <a href="" class="btn btn btn-rounded btn-brainlamp  u-w-170 u-mt-15">
                   Get Started
                 </a>
           </div> <!-- END col-lg-7-->
           
           <div class="col-lg-5">
           <div class="card box-shadow-v2 bg-white u-of-hidden text-center">
-             <h2 class="bg-primary m-0 py-3 text-white">Get Api Key Now</h2>
-             <form action="" method="POST" class="p-4 p-md-5">
-             
-             <div class="input-group u-rounded-50 border u-of-hidden u-mb-20">
+             <h2 class="bg-brainlamp m-0 py-3 text-white">Get Api Key Now</h2>
+             <form action="" method="POST" class="p-4 p-md-5" novalidate>
+                <div class="form-group row text-left">
+                    <label for="inputHorizontalSuccess" class="pl-4 col-sm-6 col-form-label">Account Type</label>
+                    <div class="col-sm-6">
+                      <div class="form-check">
+                        <label class="form-check-label">
+                          <input class="form-check-input input-radio-brainlamp" type="radio" name="account_type" id="account_patreon" value="patreon" checked>
+                          Patreon
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <label class="form-check-label">
+                          <input class="form-check-input input-radio-brainlamp" type="radio" name="account_type" id="account_free" value="free">
+                          Free
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+              <div class="input-group u-rounded-50 border u-of-hidden u-mb-20">
+                  <div class="input-group-append bg-white border-0 pl-3 pr-0">
+                    <span class="icon icon-Mail text-brainlamp input-group-text bg-transparent border-0"></span>
+                  </div>
+                  <input type="email" class="form-control border-0 p-3" name="email" id="email" placeholder="Email registered in patreon">
+                </div>
+
+             <div class="input-group u-rounded-50 border u-of-hidden u-mb-20 account_free">
               <div class="input-group-append bg-white border-0 pl-3 pr-0">
-                <span class="icon icon-User text-primary input-group-text bg-transparent border-0"></span>
+                <span class="icon icon-User text-brainlamp input-group-text bg-transparent border-0"></span>
               </div>
-              <input type="text" class="form-control border-0 p-3" placeholder="Your fullname">
+              <input type="text" class="form-control border-0 p-3" name="fullname" id="fullname" placeholder="Your fullname">
             </div>
              
-             <div class="input-group u-rounded-50 border u-of-hidden u-mb-20">
-              <div class="input-group-append bg-white border-0 pl-3 pr-0">
-                <span class="icon icon-Mail text-primary input-group-text bg-transparent border-0"></span>
-              </div>
-              <input type="text" class="form-control border-0 p-3" placeholder="Your email">
-            </div>
              
-             <!-- <div class="input-group u-rounded-50 border u-of-hidden u-mb-20">
-              <div class="input-group-addon bg-white border-0 pl-4 pr-0">
-                <span class="icon icon-ClosedLock text-primary"></span>
-              </div>
-              <input type="password" class="form-control border-0 p-3" placeholder="Password">
-            </div> -->
-               <button class="btn btn-primary btn-rounded">
-                 Get
+             
+            <div class="input-group  u-rounded-10 border u-of-hidden u-mb-20 account_free">
+              <textarea class="form-control border-0 p-3" rows="3" name="use" id="use" placeholder="A short description of the application or website that will use this API."></textarea>
+            </div>
+               <button class="btn btn-brainlamp btn-rounded">
+                 Get my key
                </button>
              </form>
            </div>

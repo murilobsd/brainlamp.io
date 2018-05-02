@@ -20,6 +20,8 @@ $path:"images/";
 
 $color-primary:#0081FF;
 $color-seondary:#8C47E2;
+$header-bg: #efdee3;
+$color-purple: #EA6589;
 $white:#fff;
 $black:#000;
 
@@ -33,7 +35,8 @@ $theming:(
   green:( color:#2CD44A, inverse:#fff ),
   red:( color:#F64D62,inverse:#fff ),
   indigo:( color:#5D51F6, inverse:#fff ),
-  lime:( color:#c8d046, inverse:#fff )
+  lime:( color:#c8d046, inverse:#fff ),
+  brainlamp:(color: $color-purple, inverse:#fff)
 ); 
 
 $gray:(

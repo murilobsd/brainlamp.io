@@ -1,13 +1,11 @@
 // BootStrap4
 @import "../../bower_components/bootstrap/scss/bootstrap.scss";
 
-
 // Variable and settings 
 @import "variables";
 
 // Mixins
 @import "mixins"; 
-
 
 // Component 
 @import "components/base";
@@ -27,11 +25,8 @@
 // Utilities or helper class 
 @import "utilities";  
 
- 
-
-
 // Vendor plugin modification
 @import "plugin/bootstrap"; 
 @import "plugin/slick";  
 
-
+@import "customize";

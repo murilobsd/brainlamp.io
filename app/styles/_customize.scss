@@ -1,0 +1,30 @@
+// form apikey textarea
+textarea#use {
+    resize: none;
+}
+
+.btn-brainlamp {
+    background: $color-purple;
+    box-shadow: 0 5px 40px 0 rgba($header-bg, .10);
+    color: #fff;
+    &:hover{
+      background: darken($color-purple, 5%);
+      box-shadow: none;
+      color: #fff;
+    }
+  }
+
+.input-radio-brainlamp::after {
+    background-color: $color-purple;
+}
+
+.social-brainlamp {
+	a {
+		background: #feecf4;
+		color: #dd95c1;
+		&:hover{
+			color: $color-purple;
+			background: #feecf5;
+		}
+	}
+}
