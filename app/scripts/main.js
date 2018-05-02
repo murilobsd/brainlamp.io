@@ -33,12 +33,28 @@ function changeAccountType(selector) {
         }
     });
 }
+function scrollTo() {
+    $('[data-scrollto]').on('click', function(){
+        var id = '#' + $(this).data('scrollto');
+        if ( $(id).length > 0 ) {
+            var offset = 0;
+            if ( $('.header').length ) {
+                offset = $('.header').height();
+            }
+            $('html').animate({scrollTop: $(id).offset().top - offset}, 700);
+        }
+        return false;
+    });
+}
+
 
 $(document).ready(function() {
     // hidden default;
+    hljs.initHighlightingOnLoad();
     $('#form-response').show();
     hiddenInputs('.account_free');
     changeAccountType('.account_free');
+    scrollTo();
 
     $('#form-apikey').submit(function(e) {
         e.preventDefault();

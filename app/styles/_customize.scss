@@ -43,3 +43,14 @@ textarea#use {
 .header-shadow {
     box-shadow: 0 3px 20px 0 rgba(167, 71, 71, 0.1);
 }
+
+.tabs-v3 .nav-link.active {
+    background: $color-purple;
+    border-color: transparent;
+    color: #fff;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: $color-purple;
+}
