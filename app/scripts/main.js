@@ -36,19 +36,19 @@ function changeAccountType(selector) {
 
 $(document).ready(function() {
     // hidden default;
-    $("#form-response").show();
+    $('#form-response').show();
     hiddenInputs('.account_free');
     changeAccountType('.account_free');
 
-    $("#form-apikey").submit(function(e) {
+    $('#form-apikey').submit(function(e) {
         e.preventDefault();
-        var fullname = $("#fullname").val(),
-            email = $("#email").val(),
-            account_type = $("input[name='account_type']:checked").val(),
-            use = $("#use").val();
+        var fullname = $('#fullname').val(),
+            email = $('#email').val(),
+            account_type = $('input[name=\'account_type\']:checked').val(),
+            use = $('#use').val();
         
         $.ajax({
-            type: "POST",
+            type: 'POST',
             url: 'https://api.brainlamp.io/v1/apike',
             contentType: 'application/json',
             data: JSON.stringify({
