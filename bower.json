@@ -11,7 +11,9 @@
     "animate.css": "^3.5.2",
     "components-font-awesome": "^5.0.6",
     "stroke-gap-icons-webfont": "Stroke-Gap-Icons-Webfont#^0.0.3",
-    "highlightjs": "^9.12.0"
+    "highlightjs": "^9.12.0",
+    "typeahead.js-bootstrap4.scss": "typeahead.js-bootstrap4#*",
+    "chart.js": "^2.7.2"
   },
   "devDependencies": {
     "chai": "^4.1.2",
