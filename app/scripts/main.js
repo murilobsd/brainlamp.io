@@ -4,9 +4,9 @@ String.prototype.toHHMMSS = function () {
     var minutes = Math.floor((sec_num - (hours * 3600)) / 60);
     var seconds = sec_num - (hours * 3600) - (minutes * 60);
 
-    if (hours   < 10) {hours   = "0"+hours;}
-    if (minutes < 10) {minutes = "0"+minutes;}
-    if (seconds < 10) {seconds = "0"+seconds;}
+    if (hours   < 10) {hours   = '0'+hours;}
+    if (minutes < 10) {minutes = '0'+minutes;}
+    if (seconds < 10) {seconds = '0'+seconds;}
     return hours+':'+minutes+':'+seconds;
 }
 
@@ -95,13 +95,13 @@ var substringMatcher = function(strs) {
   var chart = function()  {
       // Bar chart
     //   window.addEventListener('load', function() {
-        new Chart(document.getElementById("chart-area"), {
+        new Chart(document.getElementById('chart-area'), {
             type: 'pie',
     data: {
-      labels: ["Finish", "DNS-Swmin", "DNS-Bike", "DNS-Run"],
+      labels: ['Finish', 'DNS-Swmin', 'DNS-Bike', 'DNS-Run'],
       datasets: [{
-        label: "Quantity",
-        backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
+        label: 'Quantity',
+        backgroundColor: ['#3e95cd', '#8e5ea2','#3cba9f','#e8c3b9','#c45850'],
         data: [2478,5267,734,784]
       }]
     },
@@ -113,24 +113,24 @@ var substringMatcher = function(strs) {
     }
         });
     
-        new Chart(document.getElementById("chart-averages"), {
+        new Chart(document.getElementById('chart-averages'), {
             type: 'bar',
             data: {
-                labels: ["All", "Women", "Men"],
+                labels: ['All', 'Women', 'Men'],
                 datasets: [{
-                    label: "Swmin",
-                    backgroundColor: "#F29220",
-                    borderColor: "#F29220",
+                    label: 'Swmin',
+                    backgroundColor: '#F29220',
+                    borderColor: '#F29220',
                     data: [40,20,30]
                     }, {
-                    label: "Bike",
-                    backgroundColor: "#4365B0",
-                    borderColor: "#4365B0",
+                    label: 'Bike',
+                    backgroundColor: '#4365B0',
+                    borderColor: '#4365B0',
                     data: [60,80,70]
                     }, {
-                    label: "Run",
-                    backgroundColor: "#D00",
-                    borderColor: "#D00",
+                    label: 'Run',
+                    backgroundColor: '#D00',
+                    borderColor: '#D00',
                     data: [10,5,10]
                     }]
             },
@@ -141,7 +141,7 @@ var substringMatcher = function(strs) {
                             return data['labels'][tooltipItem[0]['index']];
                           },
                           label: function(tooltipItem, data) {
-                            return  data['datasets'][0]['label']+": "+data['datasets'][0]['data'][tooltipItem['index']].toString().toHHMMSS();
+                            return  data['datasets'][0]['label']+': '+data['datasets'][0]['data'][tooltipItem['index']].toString().toHHMMSS();
                           }
                     }
                   },
@@ -206,7 +206,7 @@ $(document).ready(function() {
     });
 
 
-    var $input = $(".typeahead");
+    var $input = $('.typeahead');
     $input.typeahead({
         hint: true,
         highlight: true,
@@ -217,7 +217,7 @@ $(document).ready(function() {
     });
 
     $input.change(function() {
-        var current = $input.typeahead("getActive");
+        var current = $input.typeahead('getActive');
         if (current) {
             // Some item from your model is active!
             console.log($input.val());
