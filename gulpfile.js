@@ -81,7 +81,7 @@ gulp.task('images', () => {
 gulp.task('fonts', () => {
   return gulp.src(require('main-bower-files')('**/*.{eot,svg,ttf,woff,woff2}', function (err) {})
     .concat(['app/fonts/**/*', 'bower_components/linearicons/dist/web-font/fonts/**/*']))
-    .pipe($.if(dev, gulp.dest('.tmp/fonts'), gulp.dest('dist/fonts')));
+    .pipe($.if(dev, gulp.dest('.tmp/fonts'), gulp.dest('dist/webfonts')));
 });
 
 gulp.task('extras', () => {
